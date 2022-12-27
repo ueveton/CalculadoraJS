@@ -16,31 +16,31 @@
             <input id="resultado" type="text" placeholder="0">
             <table>
                 <tr>
-                    <td colspan="2"><button class="botaoL">C</button></td>
-                    <td><button>/</button></td>
-                    <td><button>X</button></td>
+                    <td colspan="2"><button class="botaoL" onclick="calucular('acao', 'c')">C</button></td>
+                    <td><button onclick="calucular('acao', '/')">/</button></td>
+                    <td><button onclick="calucular('acao', '*')">X</button></td>
                 </tr>
                 <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>-</button></td>
+                    <td><button onclick="calucular('valor', 7)">7</button></td>
+                    <td><button onclick="calucular('valor', 8)">8</button></td>
+                    <td><button onclick="calucular('valor', 9)">9</button></td>
+                    <td><button onclick="calucular('acao', '-')">-</button></td>
                 </tr>
                 <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>+</button></td>
+                    <td><button onclick="calucular('valor', 4)">4</button></td>
+                    <td><button onclick="calucular('valor', 5)">5</button></td>
+                    <td><button onclick="calucular('valor', 6)">6</button></td>
+                    <td><button onclick="calucular('acao', '+')">+</button></td>
                 </tr>
                 <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td rowspan="2"><button class="botaoA">=</button></td>
+                    <td><button onclick="calucular('valor', 1)">1</button></td>
+                    <td><button onclick="calucular('valor', 2)">2</button></td>
+                    <td><button onclick="calucular('valor', 3)">3</button></td>
+                    <td rowspan="2"><button class="botaoA" onclick="calucular('acao', '=')">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="botaoL">0</button></td>
-                    <td><button>.</button></td>
+                    <td colspan="2"><button class="botaoL" onclick="calucular('valor', 0)">0</button></td>
+                    <td><button onclick="calucular('acao', '.')">.</button></td>
                     
                 </tr>
             </table>
@@ -49,5 +49,23 @@
     <footer>
         <p>Feito por Ueveton Soares Pereira</p>
     </footer>
+    <script>
+        function calucular (tipo, valor){
+            if (tipo === 'acao'){
+                if (valor === 'c'){
+                    document.getElementById('resultado').value =''
+                }
+                if(valor ==='+'|| valor ==='-'|| valor ==='*'|| valor ==='/'|| valor ==='.'){
+                    document.getElementById('resultado').value += valor
+                }
+                if(valor ==='='){
+                    var valor_campo = eval(document.getElementById('resultado').value)
+                    document.getElementById('resultado').value = valor_campo
+                }
+            } else if (tipo === 'valor'){
+                document.getElementById('resultado').value += valor 
+            }
+        }
+    </script>
 </body>
 </html>

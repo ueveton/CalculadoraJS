@@ -1,22 +1,20 @@
 class CalcController {
 
     constructor(){
-        this._displayCalc = '0';
+        this._displayCalEl = document.querySelector('#resultado');
+        //this._displayCalc = '0';
         this.initialize();
     }
 
     initialize (){
-        let displayCalEl = document.querySelector('#resultado');
-
-        displayCalEl.innerHTML = '1253';
 
     }
 
     get displayCal (){
-        return this._displayCalc;
+        return this._displayCalcEl.innerHTML;
     }
 
     set displayCal (valor){
-        this._displayCalc = valor;
+        this._displayCalcEl.innerHTML = valor;
     }
 }

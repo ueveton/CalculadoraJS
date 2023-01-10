@@ -7,14 +7,14 @@ class CalcController {
     }
 
     initialize (){
-
+        document.querySelectorAll('td > button');
     }
 
     get displayCal (){
         return this._displayCalcEl.innerHTML;
     }
 
-    set displayCal (valor){
-        this._displayCalcEl.innerHTML = valor;
+    set displayCal (value){
+        this._displayCalcEl.innerHTML = value;
     }
 }

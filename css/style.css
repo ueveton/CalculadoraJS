@@ -55,3 +55,7 @@ button:hover{
     padding: 5px;
     font-family: 'Calculator';
 }
+
+button {
+    border-radius: 10px;
+}

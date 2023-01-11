@@ -6,12 +6,21 @@ class CalcController {
         this.initialize();
     }
 
+    addEventListenerAll(element, events, fn){
+        events.split(' ').forEach(event =>{
+            element.addEventListener(event, fn, false);
+        });
+    }
+
     initialize (){
         let buttons = document.querySelectorAll('td > button');
 
         buttons.forEach(btn=>{
-            btn.addEventListener('click', e=>{
+            this.addEventListenerAll(btn, 'click drag', e=>{
                 console.log(btn.className.replace('btn-',''));
+            });
+            this.addEventListenerAll(btn, 'mouseover mouseup mousedown', e=>{
+                btn.style.cursor = 'pointer';
             });
         })
     }

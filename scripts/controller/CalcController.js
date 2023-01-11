@@ -7,7 +7,13 @@ class CalcController {
     }
 
     initialize (){
-        document.querySelectorAll('td > button');
+        let buttons = document.querySelectorAll('td > button');
+
+        buttons.forEach(btn=>{
+            btn.addEventListener('click', e=>{
+                console.log(btn.className.replace('btn-',''));
+            });
+        })
     }
 
     get displayCal (){

@@ -36,11 +36,11 @@ button:hover{
     background: rgb(176, 197, 189);
 }
 
-.botaoA {
+#botaoA {
     height: 106px;
 }
 
-.botaoL {
+#botaoL {
     width: 106px;
 }
 

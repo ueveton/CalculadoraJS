@@ -17,5 +17,6 @@ Projeto desenvolvido pelo curso JAVASCRIPT - CURSO COMPLETO COM 6 PROJETOS REAIS
 
 ## 📲 CONTATO
 
-uevetonsp89@gmail.com
+- 💻uevetonsp89@gmail.com
+- 💻https://www.linkedin.com/in/ueveton-soares-pereira-99005375/
 
